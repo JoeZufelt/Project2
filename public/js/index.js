@@ -1,3 +1,8 @@
+// Materialize functions
+$(document).ready(function(){
+  $('.parallax').parallax();
+});
+
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
