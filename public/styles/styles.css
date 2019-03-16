@@ -1,3 +1,28 @@
+body {
+  background-color: #ebebeb;
+}
+
+.nav-wrapper {
+  background-color: #7f1100;
+  color: #ebebeb;
+}
+
+.brand-logo {
+  margin-left: 20px;
+}
+
+.header {
+  padding-top: 10px;
+}
+
 .list-group-item {
   line-height: 2.5;
+}
+
+#footer {
+  color: #ebebeb;
+  background-color: #7f1100;
+  padding: 5px;
+  margin-top: 5px;
+  width: 100%;
 }
