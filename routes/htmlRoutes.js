@@ -40,7 +40,7 @@ module.exports = function(app) {
     res.render("signup");
   });
 
-  app.get("movies", function(req, res){
+  app.get("/movies", function(req, res){
     res.render("movies");
   });
 

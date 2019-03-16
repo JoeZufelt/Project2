@@ -1,7 +1,9 @@
 // Materialize functions
 $(document).ready(function(){
   $('.parallax').parallax();
+  $('.carousel').carousel();
 });
+
 
 // Get references to page elements
 var $exampleText = $("#example-text");
