@@ -1,5 +1,13 @@
+/* Main */
 body {
   background-color: #ebebeb;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 .nav-wrapper {
@@ -15,8 +23,18 @@ body {
   padding-top: 10px;
 }
 
+.login_signup {
+  font-size: 20px;
+}
+
 .list-group-item {
   line-height: 2.5;
+}
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
 }
 
 #footer {
@@ -24,5 +42,30 @@ body {
   background-color: #7f1100;
   padding: 5px;
   margin-top: 5px;
-  width: 100%;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+
+/* 404 Page */
+.error_page {
+  text-align: center;
+}
+
+#error_home {
+  text-align: center;
+  background: #d03900;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 7px;
+}
+
+.error_text {
+  text-align: center;
+}
+
+#popcorn {
+  margin-left: auto;
+  margin-right: auto;
+  height: 390px;
 }
