@@ -47,7 +47,27 @@ main {
   bottom: 0;
 }
 
-/* 404 Page */
+/* Index */
+.index-btn {
+  background: #d03900;
+  border-radius: 7px;
+}
+
+/* Movies */
+
+/* Login */
+.login-btn {
+  background: #d03900;
+  border-radius: 7px;
+}
+
+/* Sign Up */
+.user-btn {
+  background: #d03900;
+  border-radius: 7px;
+}
+
+/* 404 */
 .error_page {
   text-align: center;
 }
