@@ -1,6 +1,5 @@
 var db = require("../models");
 var passport = require("../config/passport");
-var bcrypt = require("bcrypt");
 var saltRounds = 8;
 
 module.exports = function(app) {
