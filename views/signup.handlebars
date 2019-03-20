@@ -1,26 +1,30 @@
- <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="username" type="username" class="validate">
-          <label for="username">Username</label>
-        </div>
-      </div>
-      <form class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password">Password</label>
-        </div>
-      </div>
-      <div class="button center-align">
-      <a class="waves-effect waves-light btn-large">Create User</a>
-      </div>
-    </form>
+ 
+ 
+ <form id="signupform" action="/signup" method="POST">
+  <div class="container">
+    <h3>Register</h3>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="username"><b>Username</b></label>
+    <input id="usernamesignup"type="text" placeholder="Enter username" name="username" required>
+
+    <label for="password"><b>Password</b></label>
+    <input id="passwordsignup" type="password" placeholder="Enter Password" name="password" required>
+
+    <label for="email"><b>Email</b></label>
+    <input id="emailsignup" type="email" placeholder="Enter email" name="email" required>
+
+    <label for="zipcode"><b>Zipcode</b></label>
+    <input id="zipcodesignup" type="text" placeholder="Enter zipcode" name="zipcode" required>
+    <hr>
+
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    <button id="createuser"type="submit" class="registerbtn">Register</button>
   </div>
+
+  <div class="container signin">
+    <p>Already have an account? <a href="/signin">Sign in</a>.</p>
+  </div>
+</form>
+
