@@ -1,6 +1,5 @@
 
 
-var bcrypt = require("bcrypt-nodejs");
 
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
@@ -94,13 +93,13 @@ var Userpreference = sequelize.define("UserPreference", {
 
 });
 
-User.generatehash = function(password){
-  return bcrypt.hashSync(password, genSaltSync(8), null);
-};
+// User.generatehash = function(password){
+//   return bcrypt.hashSync(password, genSaltSync(8), null);
+// };
 
-User.prototype.validPassword = function(password) {
-    return bcrypt.compareSync(password, this.localpassword)
-};
-  return Userpreference && User;
+// User.prototype.validPassword = function(password) {
+//     return bcrypt.compareSync(password, this.localpassword)
+// };
+//   return Userpreference && User;
 
 };

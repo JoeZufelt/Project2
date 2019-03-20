@@ -21,8 +21,9 @@
         <a href="/" class="brand-logo">Movie
           Mate</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="/login" class="login_signup">Login</a></li>
-          <li><a href="/signup" class="login_signup">Sign up</a></li>
+          {{!-- <li><a href="/login" class="login_signup">Login</a></li> --}}
+          {{!-- <li><a href="/signup" class="login_signup">Sign up</a></li> --}}
+          <li><a href="/auth/facebook">Login with Facebook</a></li>
         </ul>
         {{!-- enter mobile drop down here if using --}}
       </div>
@@ -47,6 +48,28 @@
 <script src="/js/index.js"></script>
   <script type="text/javascript" src="js/login.js"></script>
 
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
 </body>
 
