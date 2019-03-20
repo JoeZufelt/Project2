@@ -25,23 +25,14 @@ module.exports = function(app) {
     res.render("index");
   });
 
-  // profile page
-  app.get("/profile", function(req, res) {
-    res.render("profile");
-  });
-
-  // login page
-  app.get("/login", function(req, res){
-    res.render("login");
-  });
-
-  // signup page
-  app.get("/signup", function(req, res){
-    res.render("signup");
-  });
-
+  // movies page
   app.get("/movies", function(req, res){
     res.render("movies");
+  });
+
+  // results page
+  app.get("/results", function(req, res){
+    res.render("results");
   });
 
   // Render 404 page for any unmatched routes
