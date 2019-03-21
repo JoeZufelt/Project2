@@ -1,5 +1,6 @@
-var db = require("../models");
+// var db = require("../models");
 var isAuthenticated = require("../config/middleware/isAuthenticated");
+var path = require("path");
 
 module.exports = function (app) {
   // Load index page
@@ -34,6 +35,16 @@ module.exports = function (app) {
   // results page
   app.get("/results", function (req, res) {
     res.render("results");
+  });
+
+  // login page
+  app.get("/login", function(req, res){
+    res.render("login");
+  });
+
+  // signup page
+  app.get("/signup", function(req, res){
+    res.render("signup");
   });
 
   // Render 404 page for any unmatched routes
