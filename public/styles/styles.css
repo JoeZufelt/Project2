@@ -78,3 +78,49 @@ main {
   margin-right: auto;
   height: 390px;
 }
+
+/* Results */
+#viewMates{
+  position: relative;
+  background-image: url(../images/cinema.jpg);
+  height: 200px;
+  width: 945px;
+  background-color:black;
+  color:white;
+  text-align: center;
+  top:-35px;
+
+}
+#resultsContainer{
+  position:relative;
+  width:945px;
+  height: 550px;
+  background-color: green;
+}
+
+#results1 {
+  position: relative;
+  margin-top:40px; 
+  width: 33%;
+  height: 450px;
+  background-color: red;
+}
+#results2 {
+  position: relative;
+  margin-top:40px;
+  width: 33%;
+  height: 450px;
+  background-color: gold;
+}
+#results3 {
+  position: relative;
+  margin-top: 40px;
+  width: 33%;
+  height: 450px;
+  background-color: blue;
+}
+
+#display-name, #display-email, #display-zipcode, #display-preference{
+  text-align: center;
+
+}
