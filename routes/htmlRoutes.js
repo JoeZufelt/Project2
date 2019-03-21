@@ -1,6 +1,7 @@
 var db = require("../models");
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Load index page
   // app.get("/", function(req, res) {
   //   db.Userinfo.findAll({}).then(function(dbExamples) {
@@ -21,32 +22,27 @@ module.exports = function(app) {
   // });
 
   // index page
-  app.get("/", function(req, res){
+  app.get("/", function (req, res) {
     res.render("index");
   });
 
   // movies page
-  app.get("/movies", function(req, res){
+  app.get("/movies", function (req, res) {
     res.render("movies");
   });
 
   // results page
-  app.get("/results", function(req, res){
+  app.get("/results", function (req, res) {
     res.render("results");
   });
 
-  // facebook auth
-  app.get("/auth/facebook", passport.authenticate("facebook"));
-
-  // facebook callback
-  app.get("/auth/facebook/callback", passport.authenticate("facebook", 
-  {
-    successRedirect: "/",
-    failureRedirect: "/login"
-  }));
-
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
+  app.get("*", function (req, res) {
     res.render("404");
+  });
+
+  // user auth
+  app.get("/members", isAuthenticated, function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 };
