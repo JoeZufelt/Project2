@@ -23,17 +23,27 @@ module.exports = function (app) {
   // });
 
   // index page
-  app.get("/", function (req, res) {
+  // app.get("/", function (req, res) {
+  //   res.render("index");
+  // });
+  app.get("/", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      return res.redirect("/movies");
+    }
     res.render("index");
   });
 
   // movies page
   app.get("/movies", function (req, res) {
+    if (!req.user) {
+      return res.redirect("/login");
+    }
     res.render("movies");
   });
 
   // results page
-  app.get("/results", function (req, res) {
+  app.get("/results", isAuthenticated, function (req, res) {
     res.render("results");
   });
 
@@ -52,8 +62,4 @@ module.exports = function (app) {
     res.render("404");
   });
 
-  // user auth
-  app.get("/members", isAuthenticated, function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
-  });
 };
