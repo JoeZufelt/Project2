@@ -1,6 +1,5 @@
 // var db = require("../models");
 var isAuthenticated = require("../config/middleware/isAuthenticated");
-var path = require("path");
 
 module.exports = function (app) {
   // Load index page
@@ -35,10 +34,10 @@ module.exports = function (app) {
   });
 
   // movies page
-  app.get("/movies", function (req, res) {
-    if (!req.user) {
-      return res.redirect("/login");
-    }
+  app.get("/movies", isAuthenticated, function (req, res) {
+    // if (!req.User) {
+    //   return res.redirect("/login");
+    // }
     res.render("movies");
   });
 
