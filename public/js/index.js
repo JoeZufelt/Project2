@@ -2,8 +2,6 @@
 $(document).ready(function(){
   $('.parallax').parallax();
   $('.carousel').carousel();
-});
-
 
 // Get references to page elements
 var $exampleText = $("#example-text");
@@ -104,3 +102,4 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+});
