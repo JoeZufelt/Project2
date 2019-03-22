@@ -4,8 +4,8 @@
     "password": "root",
     "database": "MoviesWithFriends",
     "host": "localhost",
-    "dialect": "mysql",
-    "port": 8889
+    "dialect": "mysql"
+
   },
   "test": {
     "username": "root",

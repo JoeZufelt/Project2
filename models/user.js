@@ -38,7 +38,21 @@ module.exports = function(sequelize, DataTypes) {
 
 //     type: DataTypes.INTEGER,
 
-//     /*allowNull: false,*/
+
+module.exports = function(sequelize, DataTypes) {
+  var User = sequelize.define("User", {
+    name: { 
+      type: DataTypes.STRING,
+      /*allowNull: false,*/
+
+      validate: {
+        len:[1,15],
+        notEmpty: true,
+        isAlphanumeric: true,
+      }
+    },
+  email: {
+    type: DataTypes.STRING,
 
 //     validate: {
 //       /*min:1,

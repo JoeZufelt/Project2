@@ -39,7 +39,6 @@ module.exports = function(app) {
   //    if(password.length < 6){
   //       errors.push({msg: "Password length needs to be more than 5 characters"})
   //    };
-
   //    bcrypt.hash(req.body.password, saltRounds, function(err, hash){
   //     db.User.create({
   //       username: req.body.username,

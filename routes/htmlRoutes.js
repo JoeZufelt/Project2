@@ -47,6 +47,7 @@ module.exports = function (app) {
     res.render("results");
   });
 
+
   // login page
   app.get("/login", function(req, res){
     res.render("login");
