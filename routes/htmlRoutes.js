@@ -1,6 +1,8 @@
-var db = require("../models");
+// var db = require("../models");
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+var path = require("path");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Load index page
   // app.get("/", function(req, res) {
   //   db.Userinfo.findAll({}).then(function(dbExamples) {
@@ -21,32 +23,44 @@ module.exports = function(app) {
   // });
 
   // index page
-  app.get("/", function(req, res){
+  // app.get("/", function (req, res) {
+  //   res.render("index");
+  // });
+  app.get("/", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      return res.redirect("/movies");
+    }
     res.render("index");
   });
 
   // movies page
-  app.get("/movies", function(req, res){
+  app.get("/movies", function (req, res) {
+    if (!req.user) {
+      return res.redirect("/login");
+    }
     res.render("movies");
   });
 
   // results page
-  app.get("/results", function(req, res){
+  app.get("/results", isAuthenticated, function (req, res) {
     res.render("results");
   });
 
-  // facebook auth
- // app.get("/auth/facebook", passport.authenticate("facebook"));
 
-  // facebook callback
-  /*app.get("/auth/facebook/callback", passport.authenticate("facebook", 
-  {
-    successRedirect: "/",
-    failureRedirect: "/login"
-  })); */
+  // login page
+  app.get("/login", function(req, res){
+    res.render("login");
+  });
+
+  // signup page
+  app.get("/signup", function(req, res){
+    res.render("signup");
+  });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
+  app.get("*", function (req, res) {
     res.render("404");
   });
+
 };
