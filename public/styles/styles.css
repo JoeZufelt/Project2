@@ -83,41 +83,56 @@ main {
 #viewMates{
   position: relative;
   background-image: url(../images/cinema.jpg);
-  height: 200px;
+  height: 250px;
   width: 945px;
   background-color:black;
   color:white;
   text-align: center;
   top:-35px;
-
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
 #resultsContainer{
   position:relative;
   width:945px;
-  height: 550px;
-  background-color: green;
+  height: 600px;
+  background-color: #7f1100;
+  border-style: dotted;
+  border-color: #d03900
 }
 
 #results1 {
   position: relative;
-  margin-top:40px; 
   width: 33%;
   height: 450px;
-  background-color: red;
+  background-color: goldenrod;
+  left:5px;
+  border-style:dotted;
+  border-color: black;
+  
 }
 #results2 {
   position: relative;
-  margin-top:40px;
   width: 33%;
   height: 450px;
-  background-color: gold;
+  background-color: goldenrod;
+  left:5px;
+  border-style:dotted;
+  border-color: black;
+  
 }
 #results3 {
   position: relative;
-  margin-top: 40px;
   width: 33%;
   height: 450px;
-  background-color: blue;
+  background-color: goldenrod;
+  left:5px;
+  border-style:dotted;
+  border-color: black;
+  
 }
 
 #display-name, #display-email, #display-zipcode, #display-preference{

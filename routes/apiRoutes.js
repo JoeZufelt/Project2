@@ -43,7 +43,7 @@ module.exports = function(app) {
 
      bcrypt.hash(req.body.password, saltRounds, function(err, hash){
       db.User.create({
-        username: req.body.username,
+        name: req.body.name,
         password: hash,
         email: req.body.email,
         zipcode: req.body.zipcode

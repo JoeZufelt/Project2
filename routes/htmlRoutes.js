@@ -36,14 +36,14 @@ module.exports = function(app) {
   });
 
   // facebook auth
-  app.get("/auth/facebook", passport.authenticate("facebook"));
+ // app.get("/auth/facebook", passport.authenticate("facebook"));
 
   // facebook callback
-  app.get("/auth/facebook/callback", passport.authenticate("facebook", 
+  /*app.get("/auth/facebook/callback", passport.authenticate("facebook", 
   {
     successRedirect: "/",
     failureRedirect: "/login"
-  }));
+  })); */
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
