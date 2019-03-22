@@ -8,7 +8,7 @@ module.exports = function(app) {
     // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
     // So we're sending the user back the route to the members page because the redirect will happen on the front end
     // They won't get this or even be able to access this page if they aren't authed
-    res.redirect("/movies");
+    res.redirect("/profile");
   });
 
 /*app.post("/login", function(req, res, next){
@@ -70,6 +70,21 @@ module.exports = function(app) {
       res.json(err);
       // res.status(422).json(err.errors[0].message);
     });
+  });
+
+  app.post("/movies", function(req,res){
+    console.log(req.body);
+    db.userPost.create({
+      name: req.body.modalname,
+      email: req.body.modalemail,
+      zipcode: req.body.modalzipcode,
+      time: req.body.modaltime,
+      preference: req.body.modalpreference
+    }) .then(function(){
+      res.redirect("/results")
+    }).catch(function(err){
+      console.log(err);
+    })
   });
 
       // app.get("/profile", function(req, res) {

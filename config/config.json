@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "MoviesWithFriends",
+    "database": "movieswithfriends",
     "host": "localhost",
     "dialect": "mysql"  },
   "test": {

@@ -54,7 +54,14 @@ main {
 }
 
 /* Movies */
-
+#modal1 {
+background-color: #7f1100;
+border-style: dotted ;
+border-color: black
+}
+.modal-footer {
+  background-color: #7f1100
+}
 
 /* 404 */
 .error_page {

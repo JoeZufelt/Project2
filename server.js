@@ -3,17 +3,20 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var passport = require("./config/passport");
 var session = require("express-session");
+var bodyParser = require("body-parser");
 
 //var flash = require("connect-flash");
 
 var db = require("./models");
 
 var app = express();
-var PORT = process.env.PORT || 3030;
+var PORT = process.env.PORT || 8000;
 
 /*require("./config/passport")(passport);*/
 
 // Middleware
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));

@@ -34,7 +34,7 @@ module.exports = function (app) {
   });
 
   // movies page
-  app.get("/movies", isAuthenticated, function (req, res) {
+  app.get("/movies", /*isAuthenticated*/ function (req, res) {
     // if (!req.User) {
     //   return res.redirect("/login");
     // }
