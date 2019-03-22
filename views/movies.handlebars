@@ -14,6 +14,45 @@
 
   
   </div>
+
+<div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Find a mate!</h4>   <button  class="modal-close">X</button>
+      <form action="/movies" method="POST">
+      <div id="modalContainer">
+         <div class="input-field col s12">
+          <input name="modalname"id="modalname" type="text" class="validate">
+          <label for="modalname">First and last name</label>
+        </div>
+         <div class="input-field col s12">
+          <input name="modalemail" id="modalemail" type="text" class="validate">
+          <label for="modalemail">Email</label>
+        </div>
+         <div class="input-field col s12">
+          <input name="modalzipcode" id="modalzipcode" type="text" class="validate">
+          <label for="modalzipcode">Zipcode</label>
+        </div>
+        <div class="input-field col s12">
+          <input name="modaltime" id="modaltime" type="text" class="validate">
+          <label for="modaltime">Movie time</label>
+        </div>
+         <div class="input-field col s12">
+          <input name="modalpreference"id="modalpreference" type="text" class="validate">
+          <label for="preference">Movie preference</label>
+        </div>
+
+      </div>
+     
+    </div>
+    <div class="modal-footer">
+       <center><input type="submit" class="modal-close" value="Post"></center>
+    </div>
+    </form>
+  </div>
+ <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Create a Post
+ </a>
+
+  
 {{!-- cards for movies with available selection box --}}
 <div class="col s12 m7" id="moviecards">
     <h2 class="header">Captive State</h2>
@@ -270,4 +309,16 @@
   </div>
 
 
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('#modal1').modal();
+
+    var name = $("#modalname").val().trim();
+      var email = $("#modalemail").val().trim();
+      var zipcode = $("#modalzipcode").val().trim();
+      var time = $("#modaltime").val().trim();
+      var preference = $("#modalpreference").val().trim()
+  });
+          
   
+  </script>
